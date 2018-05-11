@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    {{> headinfo}}
+    <link rel="stylesheet" type="text/css" href="/css/article.css">
+  </head>
+  <body>
+    {{> header}}
+    <div class="home_page_body">
+      <div class="home_page_body_self_introduction_container" id="home_page_body_self_introduction_container">
+          <div class="home_page_body_self_introduction">
+              <h2>Article</h2>
+              <p class="home_page_body_self_introduction_paragraph">
+                <div id="articleIdbox" style="visibility:hidden">{{articleID}}</div>
+                  {{title}}
+                  <blockquote>
+                    <p><q>{{subTitle}}</q></p>
+                    <footer>{{author}}</footer>
+                  </blockquote>
+                  {{text}}
+              </p>
+          </div>
+          <div class="home_page_body_self_introduction">
+              <h2>Comments</h2>
+              <p class="home_page_body_self_introduction_paragraph">
+                {{#list comments}}
+                <div class="comments-display">
+                  <div class="comments-display-title" style="visibility: hidden">{{_id}}</div>
+                  <div class="comments-display-text">{{text}}</div>
+                  <div class="comments-display-pulishDate">{{commentDate}}</div>
+                </div>
+                <hr>
+                {{/list}}
+              </p>
+          </div>
+        </div>
+    </div>
+    <div class="quill-container">
+      <div id="quill-rich-editor">
+        <div id="toolbar" class="quill-toolbar"></div>
+        <div id="editor" class="quill-editor"></div>
+      </div>
+      <div class="buttons-container">
+        <a id="submit-button" class="button"><span>✓</span>submit</a>
+      </div>
+    </div>
+    <!-- Include stylesheet -->
+    <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
+
+    <!-- Include the Quill library -->
+    <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
+    <script>
+    var configs = {
+      theme: 'snow',
+    };
+    var quill = new Quill("#editor", configs);
+    </script>
+    <script type="text/javascript">
+    $("#submit-button").on("click",function() {
+      let articleId = $("#articleIdbox").text();
+      let text = quill.getText();
+      // alert('done!');
+      let comment = {
+        articleID: articleId,
+        text
+      };
+
+      $.ajax('/comment',{
+        data: JSON.stringify(comment),
+        contentType:  'application/json',
+        type: 'POST'
+      });
+      quill.setText('You comment was recived!');
+      quill.enable(false);
+    });
+    </script>
+  </body>
+</html>

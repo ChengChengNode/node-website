@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    {{> headinfo}}
+  <link rel="stylesheet" type="text/css" href="/css/articles.css">
+  </head>
+  <body>
+    {{> header}}
+    <div class="home_page_body">
+      <div class="home_page_body_self_introduction_container" id="home_page_body_self_introduction_container">
+          <div class="home_page_body_self_introduction">
+              <h2>Blogs</h2>
+              <p class="home_page_body_self_introduction_paragraph">
+                    {{#list articles}}
+                    <div class="articles-display">
+                      <div class="articles-display-title"><a href="/article/{{_id}}">{{title}}</a></div>
+                      <div class="articles-display-text">{{text}}</div>
+                      <div class="articles-display-author">{{author}}</div>
+                      <div class="articles-display-pulishDate">{{publishDate}}</div>
+                    </div>
+                    <hr>
+                    {{/list}}
+              </p>
+          </div>
+        </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,386 @@
+body{
+    margin:0;
+    background:#222;
+    font-family: 'Fredericka the Great', cursive;
+    font-weight:400;
+}
+
+.home_page_navigator{
+    width:80%;
+    margin:0 auto;
+}
+header::after{
+    content: '';
+    display: table;
+    clear: both;
+}
+header{
+    width: 1280px;
+    height: 80px;
+    position: absolute;
+    top: 0px;
+    left: 0;
+    background-color: #C7D1DA;
+    z-index: 1;
+}
+.home_page_logo{
+    float: left;
+    padding: 10px 0;
+}
+
+nav{
+    float: right;
+    height: 83px;
+}
+
+nav ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    width: 500px;
+    height: 83px;
+}
+nav li{
+    display: inline-block;
+    margin-left: 30px;
+    padding-top: 30px;
+    position: relative;
+}
+nav a{
+    height: 20px;
+    color: #444;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+nav a:hover{
+    color: #000;
+}
+
+nav a::before{
+    position: absolute;
+    top:0;
+    width:100%;
+    content: '';
+    display: block;
+    height: 5px;
+    width: 0%;
+    background-color: #444;
+    transition: all ease-in-out 200ms;
+}
+
+nav a:hover::before{
+    width:100%;
+
+}
+
+.home_page_body{
+    margin: 0;
+    padding: 0;
+}
+.home_page_videoplayer{
+    margin: 0;
+    padding: 0;
+    width: 1200px;
+    height: 680px;
+}
+
+.home_page_videoplayer video{
+
+    float: left;
+    position: absolute;
+    top:0px;
+    left: 0px;
+    margin: 0;
+    padding: 0;
+    width:1280px;
+    height: 750px;
+}
+.home_page_overvideo_content{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 1280px;
+    height: 750px;
+    line-height: 100px;
+    text-align: center;
+    background-color: transparent;
+    color: #fff;
+    font-family: 'Allura', cursive;
+    font-size: 100px;
+
+}
+.home_page_overvideo_character{
+    position: relative;
+    top: 300px;
+}
+.home_page_overvideo_content ul{
+    padding: 0;
+    margin: 0;
+    height: 100px;
+    list-style: none;
+    position: relative;
+    top: 290px;
+    font-size: 38px;
+}
+.home_page_overvideo_content li{
+    position: relative;
+    top: 20px;
+    left:550px;
+    width: 150px;
+    height: 60px;
+    border:3px solid #fff;
+    transition: all .3s;
+}
+.home_page_overvideo_content a{
+    width: 150px;
+    height: 60px;
+    position: absolute;
+    left: 0;
+    line-height: 60px;
+    text-align: center;
+    font-size: 30px;
+    color: #fff;
+    text-decoration: none;
+    transition: all .3s;
+
+}
+.home_page_overvideo_content li:hover{
+    border:3px solid #000;
+    background-color: #fff;
+}
+.home_page_overvideo_content a:hover{
+    color: #000;
+}
+.home_page_body_self_introduction_container{
+    width: 1280px;
+    background-color: #E7E7E7;
+}
+.home_page_body_self_introduction{
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 30px;
+    left: 256px;
+    width:60%;
+    position: relative;
+    padding-top: 170px;
+    padding-bottom: 20px;
+}
+.home_page_body_self_introduction h2{
+    text-align: center;
+}
+
+.home_page_body_self_introduction_paragraph2{
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 30px;
+    text-align: center;
+    display: block;
+    position: relative;
+    padding-top: 50px;
+    left: 230px;
+    width: 60%;
+}
+.home_page_body_self_introduction_paragraph3 img{
+    width: 80px;
+    height: 80px;
+}
+.home_page_body_self_introduction_paragraph3 ul{
+    margin:0;
+    position: relative;
+    width: 1200px;
+    height: 220px;
+}
+.home_page_body_self_introduction_paragraph3 li{
+    text-align: center;
+    position: relative;
+    display: inline-block;
+    width: 280px;
+    height: 220px;
+}
+.home_page_body_self_introduction_paragraph3 .home_page_habits{
+    font-family: 'Barlow Condensed', sans-serif;
+    text-align: center;
+    width: 280px;
+    height: 57px;
+}
+.home_page_image_container2{
+    margin: 0;
+    padding: 0;
+    width: 1280px;
+    height: 539px;
+}
+.home_page_image_container2 img{
+    width: 1280px;
+    height: 539px;
+}
+.home_page_work_experience{
+    font-family: 'Barlow Condensed', sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    position: relative;
+    width: 1280px;
+    height: 1200px;
+    background-color: #E7E7E7;
+}
+.home_page_work_experience h2{
+    margin: 0;
+    padding-top: 100px;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 38px;
+}
+.home_page_work_experience_context{
+    padding-top: 200px;
+    font-family: 'Allura', cursive;
+    font-size: 28px;
+    text-align: center;
+    color: #fff;
+    position: absolute;
+    top:2030px;
+    width: 1280px;
+    height: 339px;
+}
+.home_page_work_experience_context h2{
+    font-size: 30px;
+    font-family: 'Barlow Condensed', sans-serif;
+}
+.home_page_work_experience_paragraph{
+    font-size: 26px;
+    position: relative;
+    width: 60%;
+    height: 734px;
+    padding-left: 256px;
+    padding-top: 20px;
+}
+.home_page_work_experience_position{
+    float: left;
+}
+.home_page_work_experience_date{
+    float: right;
+}
+.home_page_work_experience_paragraph li{
+    list-style: circle;
+    text-align: left;
+}
+.home_page_body_work_experience_paragraph2 ul{
+    padding: 0;
+    position: relative;
+
+}
+.home_page_body_work_experience_paragraph2 li{
+    position: relative;
+    display: inline-block;
+    width:280px;
+    height: 220px;
+}
+.home_page_body_work_experience_paragraph2 .home_page_skills{
+    width:280px;
+    height: 57px;
+}
+.home_page_body_work_experience_paragraph2 img{
+    width: 80px;
+    height: 80px;
+}
+.fixed{
+    position: fixed;
+    top: 0;
+}
+.home_page_contact_information{
+    text-align: center;
+    margin: 0px;
+    padding: 0px;
+    width: 1280px;
+    height: 400px;
+    background-color: #BBC6D1;
+
+}
+.flip-container {
+    padding-left: 340px;
+}
+/* flip the pane when hovered */
+/*.flip-container .flipper, .flip-container.hover .flipper {*/
+    /*transform: rotateY(180deg);*/
+/*}*/
+
+.flip-container, .front, .back {
+    width: 600px;
+    height: 400px;
+}
+
+/* flip speed goes here */
+.flipper {
+    transition: 0.6s;
+    transform-style: preserve-3d;
+    position: relative;
+}
+
+/* hide back of pane during swap */
+.front, .back {
+    backface-visibility: hidden;
+    position: absolute;
+    transition: transform 0.6s linear 0s;
+    top: 0;
+    left: 0;
+}
+
+/* front pane, placed above back */
+.front {
+    z-index: 2;
+    /* for firefox 31 */
+    transform: rotateY(0deg);
+    padding-top: 130px;
+    width: 600px;
+    height: 270px;
+}
+
+.front .front_button_holder{
+    width:200px;
+    height: 50px;
+    background-color: #000;
+    border: 2px solid #fff;
+    margin-left: 170px;
+
+}
+
+.front a{
+    color: #fff;
+    font-family: 'Allura', cursive;
+    font-size: 30px;
+    text-decoration: none;
+}
+
+/* back, initially hidden pane */
+.back {
+    transform: rotateY(180deg);
+}
+
+.flipper .back input[type=text]{
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 10px;
+
+}
+
+.flipper .back textarea{
+    width: 100%;
+    height: 120px;
+    resize: vertical;
+}
+
+.flipper .back input[type=submit]{
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.flip_close {
+    float: right;
+}
+.flip_close img{
+    width: 20px;
+    height: 20px;
+}
