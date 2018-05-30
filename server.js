@@ -24,7 +24,8 @@ const port = process.env.PORT || 3000;
 let app = express();
 
 app.use(bodyParser.json());
-app.use('/modules',express.static(path.join(__dirname,'node_modules')))
+app.use('/',express.static(path.join(__dirname)));
+app.use('/modules',express.static(path.join(__dirname,'node_modules')));
 app.use('/image',express.static(path.join(__dirname, 'public/image')));
 app.use('/js',express.static(path.join(__dirname, 'public/js')));
 app.use('/css',express.static(path.join(__dirname, 'public/css')));
