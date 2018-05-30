@@ -19,6 +19,8 @@
     "jsdom": "^11.10.0",
     "mongodb": "^3.0.8",
     "mongoose": "^5.0.17",
+    "sweetalert2": "^7.19.3",
+    "twilio": "^3.16.0",
     "xmlhttprequest": "^1.8.0"
   }
 }

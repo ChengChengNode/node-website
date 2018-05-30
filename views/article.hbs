@@ -68,11 +68,23 @@
       $.ajax('/comment',{
         data: JSON.stringify(comment),
         contentType:  'application/json',
-        type: 'POST'
+        type: 'POST',
+        success: () => {
+          swal({
+            type: 'success',
+            title: 'Thank you!',
+            text: 'Your comment was recived!',
+            showCancerButton: false,
+            preConfirm: () => {
+              quill.setText("");
+              quill.enable(false);
+            }
+          })
+        }
       });
-      quill.setText('You comment was recived!');
-      quill.enable(false);
     });
     </script>
+    <script src="/modules/sweetalert2/dist/sweetalert2.min.js"></script>
+    <link rel="stylesheet" href="/modules/sweetalert2/dist/sweetalert2.min.css">
   </body>
 </html>

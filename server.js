@@ -3,6 +3,7 @@ const hbs = require('hbs');
 const fs = require('fs');
 const bodyParser = require('body-parser');
 const path = require('path');
+const twilio = require('twilio')('ACbcd3316257e65fced4dbd1a968c47610','2e180f2b7a3ba7a256d8527a25692ce2');
 // var XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest;
 // var xhr = new XMLHttpRequest();
 // const enzyme = require('enzyme');
@@ -17,12 +18,13 @@ let {Article} = require('./models/article');
 let {User} = require('./models/user');
 let {ArticleComment} =require('./models/comments');
 
-const serverLogFile = './log/server.log';
+const serverLogFile = __dirname + '/log/server.log';
 const port = process.env.PORT || 3000;
 
 let app = express();
 
 app.use(bodyParser.json());
+app.use('/modules',express.static(path.join(__dirname,'node_modules')))
 app.use('/image',express.static(path.join(__dirname, 'public/image')));
 app.use('/js',express.static(path.join(__dirname, 'public/js')));
 app.use('/css',express.static(path.join(__dirname, 'public/css')));
@@ -134,6 +136,22 @@ app.post('/comment',(req, res) => {
   },(err) => {
     res.status(400).send(err);
   });
+});
+
+app.post('/contactSMS', (req, res) => {
+  let text = req.body.text;
+  // console.log(req.body);
+  // res.send(200);
+  // console.log(text);
+  twilio.messages.create({
+    to: '+12144002879',
+    from: '+14695356832',
+    body: text
+  }).then(() => {
+    res.send(200);
+  });
+},(err) => {
+  console.log(err);
 });
 
 
