@@ -1,8 +1,13 @@
+flowtrac.
 that keep track on business parts of products sale of
 产品， 零配件，销售， 采购
 对比供应商，不同的零件有不同的供货商，质量。整合信息，让客户有效的进行生产决策。给客户提供参考价值。
 帮助客户对仓储的情况有一个便捷的了解。
+Inventory/repository management system that keeps tracking on procurement, processing, marketing and sales. Provided a effectively solution
+for our customs to get the integrated information of storage, transportation and supply chain.
 
+
+SINOCO
 food service business
 online
 realtime online booking system for small business
@@ -10,6 +15,11 @@ booking and lining
 订单排序优化功能。短信提醒功能。根据用户的地理位置提供最佳的送餐路径。
 减小平均的等待时间。
 让系统的运营者可以和客户进行更有效更精确的交互和交易。
+
+
+
+
+NCSI
 asian china branches
 存钱，取钱
 user interface for various type of customs
@@ -17,6 +27,3 @@ user interface for various type of customs
 MVC设计架构，设计模式 agile spam
 用户输入的数据pattern进行优化，等待时间的减少多少。
 solved issues on different multiple compatity issues cause by
-
-Inventory/repository management system that keeps tracking on procurement, processing, marketing and sales. Provided a effectively solution
-for our customs to get the integrated information of storage, transportation and supply chain.

@@ -145,10 +145,11 @@ app.post('/contactSMS', (req, res) => {
   // res.send(200);
   // console.log(text);
   twilio.messages.create({
-    to: '+12144002879',
+    to: '+8618054086728',
     from: '+14695356832',
     body: text
-  }).then(() => {
+  }).then((message) => {
+    //console.log(message);
     res.send(200);
   });
 },(err) => {
